@@ -1,0 +1,9 @@
+<%= link_to "Add New Movie", new_movie_path %>
+<%  @movies.each do |movie| %>
+
+<%= link_to movie.title, movie_path(movie) %>
+<%= movie.rating %>
+
+<%= link_to "edit", edit_movie_path(movie) %>
+<%= link_to "delete", movie_path(movie), method: "delete"%>
+<% end %>
